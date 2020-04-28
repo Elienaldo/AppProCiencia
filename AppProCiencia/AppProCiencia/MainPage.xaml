@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AppProCiencia.MainPage">
+
+    <MasterDetailPage.Master>
+        <ContentPage Title="Menu">
+            <StackLayout  Orientation="Vertical">
+                <StackLayout BackgroundColor="Aqua" HeightRequest="75">
+                    <!-- Place new controls here -->
+                    <Label Text="Pró Ciência" TextColor="Red" FontSize="Title"
+                           HorizontalOptions="Center"
+                           VerticalOptions="CenterAndExpand"/>
+                </StackLayout>
+
+                <ListView x:Name="NavigationList" 
+                          SeparatorVisibility="None" 
+                          ItemSelected="NavigationList_ItemSelected">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout VerticalOptions="FillAndExpand" Orientation="Horizontal" Spacing="20">
+                                    <Image Source="{Binding Icon}" WidthRequest="32" HeightRequest="32" VerticalOptions="Center" />
+                                    <Label Text="{Binding Title}" FontSize="Medium" VerticalOptions="Center" />
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                    
+                </ListView> 
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+
+</MasterDetailPage>
