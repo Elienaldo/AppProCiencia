@@ -9,9 +9,9 @@
     <MasterDetailPage.Master>
         <ContentPage Title="Menu">
             <StackLayout  Orientation="Vertical">
-                <StackLayout BackgroundColor="Aqua" HeightRequest="75">
+                <StackLayout HeightRequest="75">
                     <!-- Place new controls here -->
-                    <Label Text="Pró Ciência" TextColor="Red" FontSize="Title"
+                    <Label Text="Pró Ciência - Main Page" TextColor="Blue" FontSize="Title"
                            HorizontalOptions="Center"
                            VerticalOptions="CenterAndExpand"/>
                 </StackLayout>
