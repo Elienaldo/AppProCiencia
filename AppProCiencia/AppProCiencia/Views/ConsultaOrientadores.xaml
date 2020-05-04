@@ -8,10 +8,9 @@
              Title="Relação de Orientadores">
     <ContentPage.Content>
         <StackLayout>
-            <StackLayout Padding="20">
-                <Label Text="Encontre o orientador para seu projeto." TextColor="Black" FontSize="Medium"
-                    VerticalOptions="CenterAndExpand" 
-                    HorizontalOptions="CenterAndExpand" />
+            <StackLayout>
+                <SearchBar x:Name="sbAreaConhecimento" TextChanged="AreaConhecimento_TextChanged" 
+                           Placeholder="Pesquise por área de conhecimento"/>
             </StackLayout>
             
             <ListView x:Name="ListViewOrientadores" 

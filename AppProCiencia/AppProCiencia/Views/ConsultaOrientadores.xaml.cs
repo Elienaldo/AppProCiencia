@@ -37,5 +37,14 @@ namespace AppProCiencia.Views
 
             Navigation.PushAsync(new DetalheProjeto(projetoSelecionado));
         }
+
+        private void AreaConhecimento_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            var textoDigitado = sbAreaConhecimento.Text;
+
+            ListViewOrientadores.ItemsSource = ListaProjetos
+                .Where(p => p.SubArea.Nome.ToLower().Contains(textoDigitado.ToLower()))
+                .OrderBy(a => a.Autor);
+        }
     }
 }
