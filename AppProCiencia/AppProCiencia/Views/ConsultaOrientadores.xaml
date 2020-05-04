@@ -5,24 +5,25 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="AppProCiencia.Views.ConsultaOrientadores" 
-             Title="Consulta de Orientadores">
+             Title="Relação de Orientadores">
     <ContentPage.Content>
         <StackLayout>
-            <StackLayout>
-                <Label Text="Encontre o orientador adequado para seu Projeto." TextColor="Blue" FontSize="Medium"
+            <StackLayout Padding="20">
+                <Label Text="Encontre o orientador para seu projeto." TextColor="Black" FontSize="Medium"
                     VerticalOptions="CenterAndExpand" 
                     HorizontalOptions="CenterAndExpand" />
             </StackLayout>
             
             <ListView x:Name="ListViewOrientadores" 
-                      HasUnevenRows="True">
+                      HasUnevenRows="True" 
+                      ItemSelected="ListViewOrientadores_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout Padding="20">
                                 <Label Text="{Binding Autor}" TextColor="Black" FontSize="Large"/>
+                                <Label Text="{Binding SubArea.Nome}" TextColor="Black" FontSize="Medium"/>
                                 <Label Text="{Binding Titulo}" TextColor="Gray" FontSize="Small"/>
-                                <!--<Label Text="{Binding Resumo}" TextColor="Gray" FontSize="Micro"/>-->
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>

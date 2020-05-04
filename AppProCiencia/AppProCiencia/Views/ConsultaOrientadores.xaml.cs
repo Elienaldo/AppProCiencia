@@ -30,5 +30,12 @@ namespace AppProCiencia.Views
             ListaProjetos = await ApiService.ObterProjetos();
             ListViewOrientadores.ItemsSource = ListaProjetos.OrderBy(a => a.Autor);
         }
+
+        private void ListViewOrientadores_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            var projetoSelecionado = (Projeto)e.SelectedItem;
+
+            Navigation.PushAsync(new DetalheProjeto(projetoSelecionado));
+        }
     }
 }
