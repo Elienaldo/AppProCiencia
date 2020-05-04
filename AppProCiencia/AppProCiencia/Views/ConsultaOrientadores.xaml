@@ -14,10 +14,17 @@
                     HorizontalOptions="CenterAndExpand" />
             </StackLayout>
             
-            <ListView x:Name="ListViewOrientadores">
+            <ListView x:Name="ListViewOrientadores" 
+                      HasUnevenRows="True">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <TextCell Text="{Binding Nome}" />
+                        <ViewCell>
+                            <StackLayout Padding="20">
+                                <Label Text="{Binding Autor}" TextColor="Black" FontSize="Large"/>
+                                <Label Text="{Binding Titulo}" TextColor="Gray" FontSize="Small"/>
+                                <!--<Label Text="{Binding Resumo}" TextColor="Gray" FontSize="Micro"/>-->
+                            </StackLayout>
+                        </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>

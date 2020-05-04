@@ -11,7 +11,7 @@ namespace AppProCiencia.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ConsultaOrientadores : ContentPage
     {
-        public ObservableCollection<Area> ListaAreas { get; set; }
+        public ObservableCollection<Projeto> ListaProjetos { get; set; }
 
         public ConsultaOrientadores()
         {
@@ -21,18 +21,14 @@ namespace AppProCiencia.Views
 
         public async void CarregarOrientadores()
         {
-            ListaAreas = await ApiService.ObterAreas();
+            //ObservableCollection<Area> ListaAreas = await ApiService.ObterAreas();
 
-            ObservableCollection<SubArea> ListaSubAreas = await ApiService.ObterSubAreas();
+            //ObservableCollection<SubArea> ListaSubAreas = await ApiService.ObterSubAreas();
 
-            ObservableCollection<Instituicao> ListaInstituicoes = await ApiService.ObterInstituicoes();
+            //ObservableCollection<Instituicao> ListaInstituicoes = await ApiService.ObterInstituicoes();
 
-            ObservableCollection<Projeto> ListaProjetos = await ApiService.ObterProjetos();
-
-            //var orientador = new Orientador();
-            //orientador.ListaAreas = ListaAreas;
-
-            ListViewOrientadores.ItemsSource = ListaAreas.OrderBy(a => a.Nome);
+            ListaProjetos = await ApiService.ObterProjetos();
+            ListViewOrientadores.ItemsSource = ListaProjetos.OrderBy(a => a.Autor);
         }
     }
 }
