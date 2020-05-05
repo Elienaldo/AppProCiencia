@@ -16,20 +16,21 @@
                 </StackLayout>
 
                 <ListView x:Name="NavigationList" 
-                          SeparatorVisibility="Default" 
-                          ItemSelected="NavigationList_ItemSelected">
+                        SeparatorVisibility="Default" 
+                        ItemSelected="NavigationList_ItemSelected">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
-                                <StackLayout VerticalOptions="FillAndExpand" Orientation="Horizontal" Spacing="40">
+                                <StackLayout VerticalOptions="FillAndExpand" Orientation="Horizontal" 
+                                             Spacing="40" Padding="10, 10, 0, 0">
                                     <Image Source="{Binding Icon}" WidthRequest="32" HeightRequest="32" VerticalOptions="Center" />
                                     <Label Text="{Binding Title}" FontSize="Medium" VerticalOptions="Center" />
                                 </StackLayout>
                             </ViewCell>
                         </DataTemplate>
                     </ListView.ItemTemplate>
-                    
-                </ListView> 
+                </ListView>
+
             </StackLayout>
         </ContentPage>
     </MasterDetailPage.Master>

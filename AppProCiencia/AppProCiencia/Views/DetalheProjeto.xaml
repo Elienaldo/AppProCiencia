@@ -15,11 +15,25 @@
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout Padding="20">
-                                <Label Text="{Binding Titulo}" TextColor="Blue" FontSize="Subtitle" HorizontalTextAlignment="Center"/>
-                                <Label Text="{Binding Autor}" TextColor="Black" FontSize="Subtitle"/>
-                                <Label Text="{Binding Telefone}" TextColor="Black" FontSize="Default"/>
-                                <Label Text="{Binding Email}" TextColor="Black" FontSize="Default"/>
-                                <Label Text="{Binding SubArea.Nome}" TextColor="Black" FontSize="Default"/>
+                                <Label Text="{Binding Titulo}" TextColor="Blue" FontSize="Subtitle" 
+                                       HorizontalTextAlignment="Center" Padding="0, 0, 0, 10"/>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Autor: " />
+                                    <Label Text="{Binding Autor}" TextColor="Black" FontSize="Subtitle"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Telefone: " />
+                                    <Label Text="{Binding Telefone}" TextColor="Black"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="E-mail: " />
+                                    <Label Text="{Binding Email}" TextColor="Black"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Área do Conheciimento: " />
+                                    <Label Text="{Binding SubArea.Nome}" TextColor="Black"/>
+                                </StackLayout>
+                                <Label Text="Resumo do projeto" TextColor="Black" FontSize="Subtitle" Padding="0, 10, 5, 5" />
                                 <Label Text="{Binding Resumo}" TextColor="Gray" FontSize="Small"/>
                             </StackLayout>
                         </ViewCell>
