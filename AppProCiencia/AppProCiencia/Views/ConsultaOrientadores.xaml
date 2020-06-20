@@ -10,9 +10,15 @@
         <StackLayout>
             <StackLayout>
                 <SearchBar x:Name="sbAreaConhecimento" TextChanged="AreaConhecimento_TextChanged" 
-                           Placeholder="Pesquise por área de conhecimento"/>
+                           Placeholder="Filtre pela área do conhecimento"/>
             </StackLayout>
-            
+
+            <!--<ActivityIndicator IsRunning="True" 
+                               IsVisible="True"
+                               AbsoluteLayout.LayoutBounds="0.5,0.5,100,100" 
+                               AbsoluteLayout.LayoutFlags="PositionProportional"
+                               Color="Blue" />-->
+
             <ListView x:Name="ListViewOrientadores" 
                       HasUnevenRows="True" 
                       ItemSelected="ListViewOrientadores_ItemSelected">

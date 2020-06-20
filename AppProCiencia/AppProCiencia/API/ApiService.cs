@@ -9,7 +9,7 @@ namespace AppProCiencia.API
 {
     public static class ApiService
     {
-        public const string UrlServico = "https://servicoprociencia.conveyor.cloud";
+        public const string UrlServico = "https://apiprociencia.azurewebsites.net";
         public static HttpClient client = new HttpClient();
 
         public static async Task<ObservableCollection<Projeto>> ObterProjetos()

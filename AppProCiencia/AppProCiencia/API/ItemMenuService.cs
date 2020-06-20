@@ -16,7 +16,7 @@ namespace AppProCiencia.API
             ListaMenu.Add(new MasterPageItem() { Title = "Home", Icon = "Home.png", TargetType = typeof(Home) });
             //ListaMenu.Add(new MasterPageItem() { Title = "Projetos", Icon = "Home.png", TargetType = typeof(CadastroProjetos) });
             ListaMenu.Add(new MasterPageItem() { Title = "Orientadores", Icon = "Orientador.png", TargetType = typeof(ConsultaOrientadores) });
-            ListaMenu.Add(new MasterPageItem() { Title = "Sobre", Icon = "Sair.png", TargetType = typeof(Sobre) });
+            //ListaMenu.Add(new MasterPageItem() { Title = "Sobre", Icon = "Sair.png", TargetType = typeof(Sobre) });
 
             return ListaMenu;
         }
